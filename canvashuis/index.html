@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type ="module" defer src="app.js"></script>
+    </head>
+    <body>
+        <canvas id="canvasId" width="1000" height="1000" ></canvas>
+        <script type="text/javascript">
+            function getMousePosition(canvas, event) {
+                let rect = canvas.getBoundingClientRect();
+                let x = event.clientX - rect.left;
+                let y = event.clientY - rect.top;
+                console.log("Coordinate x: " + x, 
+                            "Coordinate y: " + y);
+            }
+          
+            let canvasElem = document.querySelector("canvas");
+              
+            canvasElem.addEventListener("mousedown", function(e)
+            {
+                getMousePosition(canvasElem, e);
+            });
+        </script>
+    </body>
+</html>

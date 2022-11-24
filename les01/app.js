@@ -6,7 +6,7 @@ class App
         let versienummer = (0,9)
         const d = new Date
         let autheur = ("Joost")
-        let copyright = ("---")
+        let copyright = ("adkapdji")
         let distributeur = ("ik")
         let darkmode = (true)
         console.log(appNaam)
