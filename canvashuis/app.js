@@ -10,11 +10,11 @@ class App
         // dak
         g.beginPath();
         g.fillStyle = "red"
-        g.moveTo(300,100);
-        g.lineTo(200,300);
-        g.lineTo(600,400);
-        g.lineTo(700,200);
-        g.lineTo(300,100);
+        g.moveTo(30,10);
+        g.lineTo(20,30);
+        g.lineTo(60,40);
+        g.lineTo(70,20);
+        g.lineTo(30,10);
         g.closePath();
         g.stroke();
         g.fill();
@@ -22,13 +22,23 @@ class App
         // vlak
         g.beginPath();
         g.fillStyle = "gray"
-        g.moveTo(200,500);
-        g.lineTo(200,300);
-        g.lineTo(600,400);
-        g.lineTo(700,200);
-        g.lineTo(800,300);
-        g.lineTo(800,500);
-        g.lineTo(600,600);
+        g.moveTo(20,50);
+        g.lineTo(20,30);
+        g.lineTo(60,40);
+        g.lineTo(60,60);
+        g.closePath();
+        g.stroke();
+        g.fill();
+
+        // zijkant
+        g.beginPath();
+        g.fillstyle = "black"
+        g.moveTo(60,40)
+        g.lineTo(70,20);
+        g.lineTo(80,30);
+        g.lineTo(80,50);
+        g.lineTo(60,60);
+        g.lineTo(60,40);
         g.closePath();
         g.stroke();
         g.fill();
@@ -36,12 +46,10 @@ class App
         // ramen
         g.beginPath()
         g.fillStyle = "blue"
-        g.moveTo(287,399);
-        g.lineTo(280,465);
-        g.lineTo(410,493);
-        g.lineTo(477,421);
-        g.lineTo(287,399);
-       
+        g.moveTo(28,39);
+        g.lineTo(28,46);
+        g.lineTo(43,48);
+        g.lineTo(44,41);
         g.closePath();
         g.stroke();
         g.fill();
@@ -52,7 +60,7 @@ class App
         document.getElementById("canvasId")
         console.log(canvas)
         
-        
+                
  
     }
 }
