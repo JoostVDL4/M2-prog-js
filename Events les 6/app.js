@@ -5,6 +5,8 @@ class App
         let myCanvas = document.getElementById("canvasID")
         let g = myCanvas.getContext("2d")
 
+        
+
         myCanvas.addEventListener("mousemove", (evt)=>{
             let mousePos = this.getMousePos(myCanvas, evt);
             console.log(mousePos.x)
