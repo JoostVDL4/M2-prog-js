@@ -1,17 +1,23 @@
 class App
 {
-    runApplication()
+    runApplication(){
+        let canvas = document.getElementById("canvasId");
+        let g = canvas.getContext("2d");
+        this.tekenHuis(g);
+    }
+    tekenHuis(g, x, y)
     {
         
-        let canvas = document.getElementById("canvasId");
-        let g = canvas.getContext("2d"); 
+        
+        let x = 30;
+        let y = 10;
         g.beginPath();
         g.fillStyle = "black";
         // dak
         g.beginPath();
         g.fillStyle = "red"
-        g.moveTo(30,10);
-        g.lineTo(20,30);
+        g.moveTo(x,y);
+        g.lineTo(x - 10, y + 20);
         g.lineTo(60,40);
         g.lineTo(70,20);
         g.lineTo(30,10);
@@ -44,8 +50,16 @@ class App
         g.fill();
 
         // ramen
-        g.beginPath()
-        g.fillStyle = "blue"
+        g.beginPath();
+        let randomGetal = Math.random();
+        if (randomGetal < 0.5)
+        {
+            g.fillStyle = "yellow";
+        }
+        else if (randomGetal > 0.5)
+        {
+            g.fillStyle = "black";
+        }
         g.moveTo(28,39);
         g.lineTo(28,46);
         g.lineTo(43,48);
@@ -57,11 +71,12 @@ class App
 
 
        
-        document.getElementById("canvasId")
-        console.log(canvas)
+        document.getElementById("canvasId");
+        console.log(canvas);
         
                 
  
+        
     }
 }
 
