@@ -1,6 +1,37 @@
 
 class App
 {
+
+
+    tekenKerstBoom(g,x,y){
+ 
+        
+        
+        g.fillStyle = "green";
+        
+     
+        g.fillRect(150, 350, 100, 50);
+        
+    
+        g.beginPath();
+        g.moveTo(250, 350);
+        g.lineTo(100, 200);
+        g.lineTo(200, 100);
+        g.lineTo(300, 200);
+        g.lineTo(400, 100);
+        g.lineTo(250, 350);
+        g.closePath();
+        g.fill();
+        
+       
+        g.beginPath();
+        g.fillStyle = "yellow";
+        for (let i = 0; i < 20; i++) {
+          g.arc(100 + Math.random() * 300, 100 + Math.random() * 200, 5, 0, 2 * Math.PI);
+        }
+        g.fill()
+    }
+
     
     som(a, b)
     {
@@ -25,10 +56,12 @@ class App
         this.scriptFunction();
         this.lachFunction();
         this.som();
+        
         let canvas = document.getElementById("canvasId");
         let g = canvas.getContext("2d"); 
+        this.tekenKerstBoom(g,200,200);
         
-        g.beginPath();
+        /*g.beginPath();
         g.fillStyle = "black";
         // dak
         g.beginPath();
@@ -85,12 +118,13 @@ class App
         g.stroke();
         g.fill();
 
-        
+        */
         let title = document.getElementById("newstitle");
         console.log (randomGetal);
        
         document.getElementById("canvasId");
         console.log(canvas);
+        
  
     }
     
