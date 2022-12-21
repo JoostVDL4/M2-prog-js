@@ -1,35 +1,25 @@
-
+let x = 20
+let y = 20
 class App
 {
-
-
+  
     tekenKerstBoom(g,x,y){
  
         
         
         g.fillStyle = "green";
-        
-     
-        g.fillRect(150, 350, 100, 50);
+    
         
     
         g.beginPath();
-        g.moveTo(250, 350);
-        g.lineTo(100, 200);
-        g.lineTo(200, 100);
-        g.lineTo(300, 200);
-        g.lineTo(400, 100);
-        g.lineTo(250, 350);
+        g.moveTo(x, y);
+        g.lineTo(x + 100, y-100);
+        g.lineTo(x + 200, y);
+        g.fill();
         g.closePath();
         g.fill();
         
        
-        g.beginPath();
-        g.fillStyle = "yellow";
-        for (let i = 0; i < 20; i++) {
-          g.arc(100 + Math.random() * 300, 100 + Math.random() * 200, 5, 0, 2 * Math.PI);
-        }
-        g.fill()
     }
 
     
@@ -59,7 +49,85 @@ class App
         
         let canvas = document.getElementById("canvasId");
         let g = canvas.getContext("2d"); 
-        this.tekenKerstBoom(g,200,200);
+        this.tekenKerstBoom(g,30,120);
+        this.tekenKerstBoom(g,30,190);
+        this.tekenKerstBoom(g,30,260);
+        g.beginPath();
+        g.fillStyle = "red";
+        g.arc(30,120,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "blue";
+        g.arc(30,190,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "red";
+        g.arc(30,260,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "blue";
+        g.arc(230,260,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "red";
+        g.arc(230,190,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "blue";
+        g.arc(230,120,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+
+        g.beginPath();
+        g.fillStyle = "yellow";
+        g.arc(129,21,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "blue";
+        g.arc(131,215,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "red";
+        g.arc(131,150,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.beginPath();
+        g.fillStyle = "blue";
+        g.arc(131,90,20,0,Math.PI*2);
+        g.stroke();
+        g.fill();
+        g.closePath();
+
+        g.fillStyle = "brown";
+        g.fillRect(110, 260, 40, 100);
+
+
+        
         
         /*g.beginPath();
         g.fillStyle = "black";
