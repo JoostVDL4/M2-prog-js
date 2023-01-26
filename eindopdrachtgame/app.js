@@ -5,8 +5,8 @@ let randomGetal = Math.random();
 let gradient = g.createLinearGradient(5,100,10,5);
 var colorArray = ["#0000CC", "#000000", "#CCCC00", "#FF0000", "#193300", "#80FF00"];
 var colorArrayLights = ["#b3000f", "#0330fc"];
-gradient.addColorStop(0, "red")
-gradient.addColorStop(1, "green")
+gradient.addColorStop(0, "blue")
+gradient.addColorStop(1, "red")
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -56,6 +56,7 @@ function drawLights(){
 }
 
 
+
 function kaart(){
     g.beginPath();
     g.fillStyle = "lightgray";
@@ -85,6 +86,7 @@ function kaart(){
     treeStump(640,179,20,60)
 
     //snowmans
+    
 
     const snowman1 = new snowMan(450,100);
     const snowman2 = new snowMan(50,100);
@@ -98,6 +100,7 @@ function kaart(){
     
 
     drawLights();
+   
     
 }
 
@@ -202,7 +205,7 @@ class snowMan{
         g.fill();
         g.closePath();
 
-        //oogjes
+        //oogen
         g.beginPath()
         g.fillStyle = "black";
         g.arc(96 + x, 295 - y, 1, 0, 2 * Math.PI);
@@ -216,7 +219,7 @@ class snowMan{
         g.stroke();
         g.fill();
         g.closePath();
-
+        //neus
         g.beginPath()
         g.fillStyle = "orange";
         g.arc(100 + x, 301 - y, 1, 0, 2 * Math.PI);
